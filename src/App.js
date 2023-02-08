@@ -1,12 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './components/Header'
+import Root  from './routes/Root'
+// import Header from './components/Header'
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
-   <Header />
+    <>
+    <Root />
+    </>
   );
 }
 
 export default App;
+
+
