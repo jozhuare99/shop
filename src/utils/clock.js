@@ -7,7 +7,7 @@ function Time({color, time}){
         </h1>
     )
 }
-function useTime() {
+export function useTime() {
     const [time, setTime] = useState(()=> new Date())
     useEffect(()=>{
         const id = setInterval(()=> {
@@ -34,3 +34,5 @@ export default function Clock(){
         </div>
     )
 }
+
+
