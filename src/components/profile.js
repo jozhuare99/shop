@@ -1,6 +1,24 @@
 import * as React from 'react'
 import {getImageUrl} from '../utils/personUtils'
-import { ChakraProvider, extendBaseTheme,  Box,Card, CardHeader, CardBody, CardFooter, Heading, Stack, Text ,StackDivider } from '@chakra-ui/react'
+// import { ChakraProvider, extendBaseTheme,  Box,Card, CardHeader, CardBody, CardFooter, Heading, Stack, Text ,StackDivider } from '@chakra-ui/react'
+import Profiler from './Profiler';
+
+export function AppCollapse() {
+  return (
+    <>
+      <Profiler person={{
+        imageId: 'lrWQx8l',
+        name: 'Subrahmanyan Chandrasekhar',
+      }} />
+      <Profiler person={{
+        imageId: 'MK3eW3A',
+        name: 'Creola Katherine Johnson',
+      }} />
+    </>
+  );
+}
+
+
 
 const person = {
   name: 'Gregorio Y. Zara',
