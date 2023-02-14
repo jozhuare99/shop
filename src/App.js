@@ -6,6 +6,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import PackingList, { PackingList2, DrinkList} from './components/Packing';
 import Clock, {TeaGathering} from './components/pureFuntion'
 import { Container} from 'react-bootstrap'
+import Gallery from './components/sculpture'
+import InputGreetingsForm, {FeedbackForm} from './components/useState/input'
+import RequestTracker from './components/useState/time'
+import Process from './components/useState/process'
+import MovingDot from './components/useState/updatingStateObject'
+import Form, {Form1,FormImmer,Canvas} from './components/useState/ObjectMutation'
 
 
 function App() {
@@ -13,8 +19,22 @@ function App() {
     <>
     <Header />
     <Container>
+      <div style={{
+        height:'300px'
+      }}>
+            <Canvas/>
+      </div>
+  
+      <Form/>
+      <Form1/>
+      <FormImmer/>
+      <MovingDot/>
+    <Process/>
+    <FeedbackForm/>
     <section>
     <h1>Amazing Scientist</h1>
+    <RequestTracker/>
+    <InputGreetingsForm/>
     <Profile />
     <Profile2 />
     <Profile3 />
@@ -25,6 +45,7 @@ function App() {
     <Clock />
     <TeaGathering/>
     <AppCollapse/>
+    <Gallery/>
     </Container>
     </>
   );
