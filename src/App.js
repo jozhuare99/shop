@@ -12,7 +12,8 @@ import RequestTracker from './components/useState/time'
 import Process from './components/useState/process'
 import MovingDot from './components/useState/updatingStateObject'
 import Form, {Form1,FormImmer,Canvas} from './components/useState/ObjectMutation'
-
+import List from './components/useState/updateState'
+import {ShoppingCart2, ShoppingCart3} from './components/useState/updateArrayObject'
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
       }}>
             <Canvas/>
       </div>
-  
+      <List/>
+  <ShoppingCart2/>
+  <ShoppingCart3/>
       <Form/>
       <Form1/>
       <FormImmer/>
