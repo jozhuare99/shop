@@ -13,13 +13,14 @@ import Process from './components/useState/process'
 import MovingDot from './components/useState/updatingStateObject'
 import Form, {Form1,FormImmer,Canvas} from './components/useState/ObjectMutation'
 import List from './components/useState/updateState'
-import {ShoppingCart2, ShoppingCart3} from './components/useState/updateArrayObject'
+import {ShoppingCart2, ShoppingCart3, TaskApp} from './components/useState/updateArrayObject'
 
 function App() {
   return (
     <>
     <Header />
     <Container>
+      <TaskApp/>
       <div style={{
         height:'300px'
       }}>
