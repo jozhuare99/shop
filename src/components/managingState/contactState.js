@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import ContactList from './ContactList.js';
-import EditContact from './EditContact.js';
+
 
 export default function ContactManager() {
   const [
@@ -48,3 +47,72 @@ const initialContacts = [
   { id: 1, name: 'Alice', email: 'alice@mail.com' },
   { id: 2, name: 'Bob', email: 'bob@mail.com' }
 ];
+
+
+function ContactList({
+    contacts,
+    selectedId,
+    onSelect
+  }) {
+    return (
+      <section>
+        <ul>
+          {contacts.map(contact =>
+            <li key={contact.id}>
+              <button onClick={() => {
+                onSelect(contact.id);
+              }}>
+                {contact.id === selectedId ?
+                  <b>{contact.name}</b> :
+                  contact.name
+                }
+              </button>
+            </li>
+          )}
+        </ul>
+      </section>
+    );
+  }
+
+  function EditContact({ initialData, onSave }) {
+    const [name, setName] = useState(initialData.name);
+    const [email, setEmail] = useState(initialData.email);
+    return (
+      <section>
+        <label>
+          Name:{' '}
+          <input
+            type="text"
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+        </label>
+        <label>
+          Email:{' '}
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </label>
+        <button onClick={() => {
+          const updatedData = {
+            id: initialData.id,
+            name: name,
+            email: email
+          };
+          onSave(updatedData);
+        }}>
+          Save
+        </button>
+        <button onClick={() => {
+          setName(initialData.name);
+          setEmail(initialData.email);
+        }}>
+          Reset
+        </button>
+      </section>
+    );
+  }
+
+  
