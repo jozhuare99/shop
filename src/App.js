@@ -15,12 +15,14 @@ import Form, {Form1,FormImmer,Canvas} from './components/useState/ObjectMutation
 import List from './components/useState/updateState'
 import {ShoppingCart2, ShoppingCart3, TaskApp} from './components/useState/updateArrayObject'
 import FilterableList from './components/managingState/searchSharingState'
+import Messenger from './components/managingState/reducerContact'
 
 function App() {
   return (
     <>
     <Header />
     <Container>
+      <Messenger/>
       <FilterableList/>
       <TaskApp/>
       <div style={{
