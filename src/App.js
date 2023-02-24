@@ -16,12 +16,14 @@ import List from './components/useState/updateState'
 import {ShoppingCart2, ShoppingCart3, TaskApp} from './components/useState/updateArrayObject'
 import FilterableList from './components/managingState/searchSharingState'
 import Messenger from './components/managingState/reducerContact'
+import TaskAppStateReducer from './components/context/functionStateContextReducer'
 
 function App() {
   return (
     <>
     <Header />
     <Container>
+      <TaskAppStateReducer/>
       <Messenger/>
       <FilterableList/>
       <TaskApp/>
