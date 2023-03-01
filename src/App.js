@@ -17,13 +17,24 @@ import {ShoppingCart2, ShoppingCart3, TaskApp} from './components/useState/updat
 import FilterableList from './components/managingState/searchSharingState'
 import Messenger from './components/managingState/reducerContact'
 import TaskAppStateReducer from './components/context/functionStateContextReducer'
+import VideoPlayerApp from './components/escapeHatch/effect/sample'
+import CApp from './components/escapeHatch/effect/chat'
+import AnimationEffect from './components/escapeHatch/effect/triggeringAnimation'
+import ModalEffect from './components/escapeHatch/effect/modalEffect'
+import InterSectionEffect from './components/escapeHatch/effect/InterSectionEffect'
 
 function App() {
   return (
     <>
     <Header />
     <Container>
+      <InterSectionEffect/>
+      <ModalEffect/>
+      <AnimationEffect/>
+      <CApp/>
+      <VideoPlayerApp/>
       <TaskAppStateReducer/>
+
       <Messenger/>
       <FilterableList/>
       <TaskApp/>
