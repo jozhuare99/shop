@@ -14,9 +14,14 @@ export default function Page(){
     const [bio,setBio] = useState(null)
 
     useEffect(()=>{
+        //fix the race condition issue
+        let ignore = false
         setBio(null)
         fetchBio(person).then(result=>{
+            if(!ignore){
             setBio(result)
+        }
+        return ()=>{ignore=true}
         })
     }, [person])
 
