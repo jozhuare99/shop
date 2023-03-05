@@ -1,14 +1,15 @@
 import {useState,useEffect} from 'react'
 
-export default function EditContact({savedContact, onSave}){
+export default function EditContact(prop){
+    return(
+        <EditForm {...prop} key={prop.savedContact.id} />
+    )
+}
+
+
+function EditForm({savedContact, onSave}){
     const [name, setName] = useState(savedContact.name)
     const [email, setEmail]= useState(savedContact.email)
-
-    //problem with useEffect
-    useEffect(()=>{
-        setName(savedContact.name)
-        setEmail(savedContact.email)
-    }, [savedContact])
 
     return (
         <section>
