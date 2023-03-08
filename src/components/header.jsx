@@ -11,6 +11,7 @@ export default function Header() {
                 <Nav.Item>
                 <Form className="d-flex">
                 <InputGroup className="mb-3">
+                <i className="bi bi-bag-fill"></i>
                 <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
                 <Form.Control
                 placeholder="Username"
@@ -23,7 +24,7 @@ export default function Header() {
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link href='/shop'>
-                        <i class="bi bi-bag-fill"></i>
+                        
                     </Nav.Link>
                 </Nav.Item>
             </Nav>
