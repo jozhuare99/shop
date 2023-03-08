@@ -1,8 +1,9 @@
 import React,   {useState} from 'react'
-import {Nav, Container, Form, Button} from 'react-bootstrap'
+import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 
 
-export default function header() {
+
+export default function Header() {
   return (
     <>
         <Container className='mt-2'>
@@ -17,6 +18,11 @@ export default function header() {
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form>
+                </Nav.Item>
+                <Nav.Item>
+                    <Nav.Link href='/shop'>
+                        <i class="bi bi-bag-fill"></i>
+                    </Nav.Link>
                 </Nav.Item>
             </Nav>
         </Container>
