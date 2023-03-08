@@ -11,13 +11,13 @@ export default function Header() {
                 <Nav.Item>
                 <Form className="d-flex">
                 <InputGroup className="mb-3">
-                <i className="bi bi-bag-fill"></i>
                 <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
                 <Form.Control
                 placeholder="Username"
                 aria-label="Username"
                 aria-describedby="basic-addon1"
                 />
+                <i className="bi bi-bag-fill">test etsttsts</i>
                 </InputGroup>
                   <Button variant="outline-success">Search</Button>
                 </Form>
