@@ -10,12 +10,14 @@ export default function Header() {
             <Nav variant='pills' defaultActiveKey={'/'}>
                 <Nav.Item>
                 <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
+                <InputGroup className="mb-3">
+                <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
+                <Form.Control
+                placeholder="Username"
+                aria-label="Username"
+                aria-describedby="basic-addon1"
+                />
+                </InputGroup>
                   <Button variant="outline-success">Search</Button>
                 </Form>
                 </Nav.Item>
