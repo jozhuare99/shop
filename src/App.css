@@ -1,0 +1,7 @@
+.text-input-group-search{
+	color:'black';
+}
+
+.textInputSearch:focus{
+	  box-shadow: none !important;
+}

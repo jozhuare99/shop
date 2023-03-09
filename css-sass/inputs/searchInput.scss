@@ -1,0 +1,12 @@
+
+
+  --#{$prefix}form-control-bg: var(--#{$prefix}primary-bg);
+  --#{$prefix}form-control-disabled-bg: var(--#{$prefix}secondary-bg);
+
+  .text-input-group-search{
+	color:'black';
+}
+
+.textInputSearch:focus{
+	  box-shadow: none !important;
+}
