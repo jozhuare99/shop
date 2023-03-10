@@ -1,12 +1,41 @@
-import React,   {useState} from 'react'
+import React,   {useRef, useState, useEffect} from 'react'
 import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 import NavigationLinkData from './navigationLinkData'
 
-
 export default function Header() {
+  let windowWidthRef = useRef(0)
+  const [moreFS, setMoreFS]= useState(false)
+
+  // const onResize = useEffectEvent(cb=>{
+  //   setWindowWidth(cb.view.innerWidth, windowWidth)
+  // })
+
+  useEffect(()=>{
+    let ignore = true
+    function setUpdatedWidth(){
+      if(window.innerWidth>992){
+        if(ignore!==moreFS){
+        console.log('function triggered')
+        setMoreFS(true)
+        ignore = moreFS
+        }
+      } else {
+        setMoreFS(false)
+      }
+    }
+    window.addEventListener('resize', setUpdatedWidth)
+    return ()=> {
+      window.removeEventListener('resize', setUpdatedWidth)
+    }
+  },[moreFS])
+
+
+
+  
+
  return ( 
   <>
-   <Container className='my-2 headerMaxHeight'>
+   <Container className='my-2 headerMaxHeight bg-info' >
     <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight user-select-none p-0'>
      <Nav.Item className="p-0 m-0">
       <Form className="p-0 m-0">
@@ -19,19 +48,21 @@ export default function Header() {
       </Nav.Item>
       <Nav.Item>
         <Container  className='h-100 cartBagContainer px-2'>
-        <a onClick={()=>console.log('clicked')} className=' d-flex text-decoration-none align-items-center text-center justify-content-center'>
+        <a href='#' onClick={()=>console.log('clicked')} className=' d-flex text-decoration-none align-items-center text-center justify-content-center'>
           <i role='button' className="text-cart-bag text-dark bi bi-bag-fill"></i>
           <p role='button' className='cartNumberCount text-white  position-absolute mx-auto mt-4 fs-4'>9</p>
           </a>
         </Container>
       </Nav.Item>
-      <Nav.Item>
+      <div>
+      <Nav.Item> 
         <div className='profileContainer h-100 px-1 d-flex justify-content-between align-items-center'>
           <i role='button' className="text-profile-icon text-dark fs-3 me-1 bi bi-person-circle"></i>
-          <p role='button' className='text-regular-style my-auto'>name..</p>
+          <p role='button' className='text-regular-style my-auto'>{moreFS ? 'name..': ''}</p>
         </div>
       </Nav.Item>
-      <NavigationLinkData/>
+      <NavigationLinkData moreFS={moreFS}/>
+      </div>
       
      </Nav>
   </Container>
