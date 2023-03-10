@@ -1,3 +1,8 @@
+//container gutter
+$customGutter:  0.2rem;
+
+
+$container-padding-x:  $customGutter;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";

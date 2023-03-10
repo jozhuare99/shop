@@ -1,12 +1,13 @@
 import React,   {useState} from 'react'
 import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
+import NavigationLinkData from './navigationLinkData'
 
 
 export default function Header() {
- return (
+ return ( 
   <>
    <Container className='my-2 headerMaxHeight'>
-    <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight p-0'>
+    <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight user-select-none p-0'>
      <Nav.Item className="p-0 m-0">
       <Form className="p-0 m-0">
       <InputGroup className="p-0 m-0 text-input-group-search d-flex justify-content-end align-content-center">
@@ -16,20 +17,22 @@ export default function Header() {
       </InputGroup>
       </Form>
       </Nav.Item>
-      <Nav.Item className='user-select-none'>
+      <Nav.Item>
         <Container  className='h-100 cartBagContainer px-2'>
-        <a role='button' onClick={()=>console.log('clicked')} className=' d-flex text-decoration-none align-items-center text-center justify-content-center'>
-          <i className="text-cart-bag text-dark bi bi-bag-fill"></i>
-          <p className='cartNumberCount text-white  position-absolute mx-auto mt-4 fs-4'>9</p>
+        <a onClick={()=>console.log('clicked')} className=' d-flex text-decoration-none align-items-center text-center justify-content-center'>
+          <i role='button' className="text-cart-bag text-dark bi bi-bag-fill"></i>
+          <p role='button' className='cartNumberCount text-white  position-absolute mx-auto mt-4 fs-4'>9</p>
           </a>
         </Container>
       </Nav.Item>
       <Nav.Item>
-        <div className='profileContainer'>
-          <i className="text-profile-icon text-dark bi bi-person-circle"></i>
+        <div className='profileContainer h-100 px-1 d-flex justify-content-between align-items-center'>
+          <i role='button' className="text-profile-icon text-dark fs-3 me-1 bi bi-person-circle"></i>
+          <p role='button' className='text-regular-style my-auto'>name..</p>
         </div>
       </Nav.Item>
-
+      <NavigationLinkData/>
+      
      </Nav>
   </Container>
  </>

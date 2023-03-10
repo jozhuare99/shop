@@ -1,9 +1,30 @@
-
+import {useRef} from 'react'
+import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 
 const initialData = [
-{id: 2, name:  'home', icon: 'house-fill'},
-{id: 3, name:  'flash', icon: 'flash-fill'},
-{id: 4, name:  'feed', icon: 'heart-fill'},
-{id: 5, name:  'popular', icon: 'fire-fill'},
-{id: 6, name:  'about', icon: 'questionmark-fill'}
+{name:  'home', icon: 'shop'},
+{name:  'flash', icon: 'lightning-charge-fill'},
+{name:  'feed', icon: 'heart-fill'},
+{name:  'popular', icon: 'fire'},
+{name:  'about', icon: 'question-circle-fill'}
 ]
+
+export default function NavigationLinkData(){
+
+	 return (
+	 	  	initialData.map(data =>
+	 	  		<Nav.Item key={data.name} className='mx-auto'>
+	           <div className='profileContainer h-100 px-1 d-flex justify-content-between align-items-center'>
+	             <i role='button' className={`text-profile-icon text-dark fs-3 me-1 bi bi-${data.icon}`}></i>
+	             <p role='button' className='text-regular-style my-auto'>{data.name}</p>
+	           </div>
+	 	      </Nav.Item>
+	 	  	)
+	 	  
+	 )
+	 
+}
+
+
+
+
