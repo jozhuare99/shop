@@ -9,14 +9,14 @@ const initialData = [
 {name:  'about', icon: 'question-circle-fill'}
 ]
 
-export default function NavigationLinkData({moreFS}){
+export default function NavigationLinkData({moreFS, tabScreen, mobileScreen}){
 
 	 return (
 	 	  	initialData.map(data =>
 	 	  		<Nav.Item key={data.name} className={'mx-auto'}>
 	           <div className='profileContainer h-100 px-1 d-flex justify-content-between align-items-center'>
-	             <i role='button' className={`text-profile-icon text-dark fs-3 ${moreFS ? 'me-1' : 'mx-0'} bi bi-${data.icon}`}></i>
-	             <p role='button' className='text-regular-style my-auto'>{moreFS ? data.name : ''}</p>
+	             <i role='button' className={`text-profile-icon text-dark fs-3 ${(moreFS||tabScreen) ? 'me-1' : 'mx-0'} bi bi-${data.icon}`}></i>
+	             <p role='button' className='text-regular-style my-auto'>{moreFS ? data.name: (tabScreen ? data.name: (mobileScreen ? data.name : ''))}</p>
 	           </div>
 	 	      </Nav.Item>
 	 	  	)
