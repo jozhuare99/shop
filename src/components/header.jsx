@@ -1,11 +1,11 @@
-import React,   {useRef, useState, useEffect} from 'react'
+import React,   {useRef ,useState, useEffect} from 'react'
 import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 import NavigationLinkData from './navigationLinkData'
-import useDeviceWidth from './customHook/useDeviceWidth'
 
-export default function Header() {
+
+export default function Header({mobile, tablet, monitor}) {
   let windowWidthRef = useRef(0)
-  const{mobile, tablet, monitor} = useDeviceWidth()
+  
 
  return ( 
   <>
@@ -45,3 +45,4 @@ export default function Header() {
  </>
  )
 }
+

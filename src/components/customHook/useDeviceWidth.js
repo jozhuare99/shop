@@ -13,7 +13,7 @@ function debounce(fn,delay){
 
 export default function useDeviceWidth(){
 
-	let [screenInfo, setSecreenInfo] = useState({mobile:false,tablet:true,monitor:true})
+	let [screenInfo, setSecreenInfo] = useState({mobile:false,tablet:false,monitor:false})
 	const handleResize = debounce(()=>{
 			let mobileScreens = window.innerWidth < 659;
       let tabScreens = window.innerWidth < 796 && window.innerWidth >= 659
