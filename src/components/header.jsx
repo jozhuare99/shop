@@ -5,41 +5,14 @@ import useDeviceWidth from './customHook/useDeviceWidth'
 
 export default function Header() {
   let windowWidthRef = useRef(0)
-  // const [moreFS, setMoreFS]= useState(true)
-  // const [tabScreen, setTabScreen]= useState(false)
-  // const [mobileScreen, setMobileScreen]= useState(false)
-
   const{mobile, tablet, monitor} = useDeviceWidth()
-
-  // const onResize = useEffectEvent(cb=>{
-  //   setWindowWidth(cb.view.innerWidth, windowWidth)
-  // })
-
-  // useEffect(()=>{
-  //   function setUpdatedWidth(){
-  //     let mobileScreens = window.innerWidth < 659;
-  //     let tabScreens = window.innerWidth < 796 && window.innerWidth >= 659
-  //     let moreFSs = window.innerWidth > 992
-
-  //     setMobileScreen(mobileScreens)
-  //     setTabScreen(tabScreens)
-  //     setMoreFS(moreFSs)
-    
-  //   }
-  //   window.addEventListener('resize', setUpdatedWidth)
-  //   return ()=> {
-  //     window.removeEventListener('resize', setUpdatedWidth)
-  //   }
-  // },[])
-
-
 
  return ( 
   <>
    <Container className='my-2 ' >
     <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight user-select-none p-0'>
       <div className='d-flex ps-2 flex-nowrap flex-grow-1'>
-        <Nav.Item className="p-0 w-100">
+        <Nav.Item className="p-0 w-100 mx-auto">
           <Form className="p-0 m-0">
           <InputGroup className="p-0 m-0 text-input-group-search d-flex justify-content-end align-content-center">
             <InputGroup.Text className='bg-white border-end-0 border-dark pe-1  '><i className="bi bi-search text-search-icon my-0 "></i></InputGroup.Text>
@@ -61,7 +34,7 @@ export default function Header() {
         <Nav.Item className='mx-auto'> 
           <div className='profileContainer h-100  d-flex justify-content-between align-items-center'>
             <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
-            <p role='button' className='text-regular-style my-auto'>{monitor ? 'name..' : (tablet ? 'name..' : (mobile ? 'name..' : ''))}</p>
+            <p role='button' className='text-regular-style my-auto'>{monitor ? 'name..' : (tablet ? 'name..' : (mobile ? '' : ''))}</p>
           </div>
         </Nav.Item>
         <NavigationLinkData moreFS={monitor} tabScreen={tablet} mobileScreen={mobile}/>

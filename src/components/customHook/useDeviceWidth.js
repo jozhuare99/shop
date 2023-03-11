@@ -1,4 +1,5 @@
 import {useState, useEffect} from 'react'
+import { isEqual } from 'lodash';
 
 function debounce(fn,delay){
 	let timer;
@@ -11,21 +12,30 @@ function debounce(fn,delay){
 }
 
 export default function useDeviceWidth(){
-	//const [width, setWidth] = useState(window.innerWidth)
-	let [screeInfo, setSecreenInfo] = useState({mobile:true,tablet:true,monitor:true})
+
+	let [screenInfo, setSecreenInfo] = useState({mobile:false,tablet:true,monitor:true})
 	const handleResize = debounce(()=>{
 			let mobileScreens = window.innerWidth < 659;
       let tabScreens = window.innerWidth < 796 && window.innerWidth >= 659
       let moreFSs = window.innerWidth > 992
-      setSecreenInfo({mobile:mobileScreens, tablet:tabScreens, monitor:moreFSs})
-		//setWidth(window.innerWidth)
+      let newScreentInfo = {
+      		mobile:mobileScreens, 
+      		tablet:tabScreens, 
+      		monitor:moreFSs
+      }
+      
+      if(!isEqual(screenInfo, newScreentInfo)){
+      setSecreenInfo(newScreentInfo)
+      }
+
+
 	}, 500)
 	useEffect(()=>{
 		window.addEventListener('resize', handleResize)
 		return ()=>{
 			window.removeEventListener('resize', handleResize)
 		}
-	},[])
+	},[screenInfo])
 
-	return screeInfo;
+	return screenInfo;
 }

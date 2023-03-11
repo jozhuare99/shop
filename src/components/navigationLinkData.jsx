@@ -16,7 +16,7 @@ export default function NavigationLinkData({moreFS, tabScreen, mobileScreen}){
 	 	  		<Nav.Item key={data.name} className={'mx-auto'}>
 	           <div className='profileContainer h-100 px-1 d-flex justify-content-between align-items-center'>
 	             <i role='button' className={`text-profile-icon text-dark fs-3 ${(moreFS||tabScreen) ? 'me-1' : 'mx-0'} bi bi-${data.icon}`}></i>
-	             <p role='button' className='text-regular-style my-auto'>{moreFS ? data.name: (tabScreen ? data.name: (mobileScreen ? data.name : ''))}</p>
+	             <p role='button' className='text-regular-style my-auto'>{moreFS ? data.name: (tabScreen ? data.name: (mobileScreen ? '': ''))}</p>
 	           </div>
 	 	      </Nav.Item>
 	 	  	)
