@@ -13,5 +13,33 @@
         "todos",
         "useImmer"
     ],
-    "liveServer.settings.port": 6958
+    "liveServer.settings.port": 6958,
+    "workbench.cloudChanges.autoResume": "off",
+    "workbench.cloudChanges.continueOn": "off",
+    "auto-close-tag.activationOnLanguage": [
+
+        "xml",
+        "php",
+        "blade",
+        "ejs",
+        "jinja",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "plaintext",
+        "markdown",
+        "vue",
+        "liquid",
+        "erb",
+        "lang-cfml",
+        "cfml",
+        "HTML (EEx)",
+        "HTML (Eex)",
+        "plist"
+    ],
+    "typescript.tsserver.watchOptions": {
+        "watchDirectory": "dynamicPriorityPolling",
+        "watchFile": "dynamicPriorityPolling"
+      }
 }
