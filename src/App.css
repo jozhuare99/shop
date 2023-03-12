@@ -1,5 +1,7 @@
 
-
+.line-height-0{
+	line-height: 0;
+}
 .headerMaxHeight{
 	max-height: 3.1rem;
 	height: 3.1rem;
@@ -62,6 +64,11 @@
 
 .card-rating{
 	top:23px;
+}
+
+.cardBody{
+	padding: 1rem;
+	color: aqua;
 }
 
 
