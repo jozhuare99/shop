@@ -1,10 +1,9 @@
-import React,   {useRef ,useState, useEffect} from 'react'
+import React,{} from 'react'
 import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 import NavigationLinkData from './navigationLinkData'
 
 
-export default function Header({mobile, tablet, monitor}) {
-  let windowWidthRef = useRef(0)
+export default function Header() {
   
 
  return ( 
@@ -34,10 +33,10 @@ export default function Header({mobile, tablet, monitor}) {
         <Nav.Item className='mx-auto'> 
           <div className='profileContainer h-100  d-flex justify-content-between align-items-center'>
             <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
-            <p role='button' className='text-regular-style my-auto'>{monitor ? 'name..' : (tablet ? 'name..' : (mobile ? '' : ''))}</p>
+            <p role='button' className='text-regular-style my-auto'>name..</p>
           </div>
         </Nav.Item>
-        <NavigationLinkData moreFS={monitor} tabScreen={tablet} mobileScreen={mobile}/>
+        <NavigationLinkData/>
       </div>
       
      </Nav>

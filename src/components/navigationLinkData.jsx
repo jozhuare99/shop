@@ -1,5 +1,4 @@
-import {useRef} from 'react'
-import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
+import {Nav} from 'react-bootstrap'
 
 const initialData = [
 {name:  'home', icon: 'shop'},
@@ -9,16 +8,16 @@ const initialData = [
 {name:  'about', icon: 'question-circle-fill'}
 ]
 
-export default function NavigationLinkData({moreFS, tabScreen, mobileScreen}){
+export default function NavigationLinkData(){
 
 	 return (
 	 	  	initialData.map(data =>
 	 	  		<Nav.Item key={data.name} className={'mx-auto'}>
-	           <div className='profileContainer h-100 px-1 d-flex justify-content-between align-items-center'>
-	             <i role='button' className={`text-profile-icon text-dark fs-3 ${(moreFS||tabScreen) ? 'me-1' : 'mx-0'} bi bi-${data.icon}`}></i>
-	             <p role='button' className='text-regular-style my-auto'>{moreFS ? data.name: (tabScreen ? data.name: (mobileScreen ? '': ''))}</p>
-	           </div>
-	 	      </Nav.Item>
+					<div className='profileContainer h-100 px-1 d-flex overflow-hidden justify-content-between align-items-center'>
+						<i role='button' className={`text-profile-icon text-dark fs-3  mx-auto bi bi-${data.icon}`}></i>
+						<p role='button' className='text-navigation-style ms-1 my-auto'>{data.name}</p>
+					</div>
+	 	      	</Nav.Item>
 	 	  	)
 	 	  
 	 )
