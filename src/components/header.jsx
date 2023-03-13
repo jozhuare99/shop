@@ -33,12 +33,11 @@ export default function Header() {
         <Nav.Item className='mx-auto'> 
           <div className='profileContainer h-100  d-flex justify-content-between align-items-center'>
             <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
-            <p role='button' className='text-regular-style my-auto'>name..</p>
+            <p role='button' className='user-name my-auto'>name..</p>
           </div>
         </Nav.Item>
         <NavigationLinkData/>
       </div>
-      
      </Nav>
   </Container>
  </>

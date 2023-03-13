@@ -64,15 +64,21 @@
 	top:23px;
 }
 
-.cardBody{
-	padding: 1rem;
-	color: aqua;
+.card-body{
+}
+.text-wrap{
+	white-space: wrap;
+}
+.product-title{
+	
 }
 
-
-/* big screen mobile size */
-
-/* small screen mobile size */
-
-/* mobile devices format the card item  */
-
+@import url('./style/css/1400px-maxscreen.css');
+@import url('./style/css/1200px-regulardesktop.css');
+@import url('./style/css/998px-laptopscreen.css');
+@import url('./style/css/991px-laptopscreen.css');
+@import url('./style/css/767px-tabletscreen.css');
+@import url('./style/css/659px-bigmobilescreen.css');
+@import url('./style/css/344-574px-regularmobile.css');
+@import url('./style/css/343px-smallestscreen.css');
+@import url('./style/css/240px-tinyscreen.css');
