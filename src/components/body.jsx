@@ -35,7 +35,7 @@ export default function Body() {
         <Card className='card-item mx-2'>
           <Card.Img variant="top" src={'https://mobiili.fi/wp-content/uploads/2020/11/iphone_12_mini_pre_2-800x675.jpg'} />
           <div className=' my-0 card-rating'>
-            <p className='my-0 ms-1'>
+            <p className='my-0 ms-1 text-small-size'>
               <svg id="a" data-name="heart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 30" className="w-50">
                 <g>
                   <path id="f" data-name="heart-5" d="M9.75,3.27c3.7,0,6.69,2.94,6.69,6.56,0-3.62,2.99-6.56,6.69-6.56s6.69,2.94,6.69,6.56c0,5.46-5.41,7.38-12.72,16.07-.31,.36-.85,.41-1.21,.1-.04-.03-.07-.07-.1-.1C8.47,17.21,3.06,15.29,3.06,9.83c0-3.62,2.99-6.56,6.69-6.56Z" style={{ fill: 'transparent', stroke: '#000', strokeMiterlimit: 10 }} />
@@ -64,7 +64,7 @@ export default function Body() {
             </p>
           </div>
           <Card.Body className='p-2 bg-warning '>
-            <Card.Title className='mb-0 '>Card Title longer ..</Card.Title>
+            <Card.Title className='mb-0 line-height-0 '>Card Title longer ..</Card.Title>
             <Card.Text className='m-0 fs-3 p-0'>&#8369;123.45 </Card.Text>
             <p className='fw-lighter line-height-0'>81% discount off &#8369;12.65 </p>
             <Button variant="primary">Go somewhere</Button>
