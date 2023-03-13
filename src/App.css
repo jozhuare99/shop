@@ -1,4 +1,6 @@
-
+* {
+	box-sizing: border-box;
+}
 
 .headerMaxHeight{
 	max-height: 3.1rem;
@@ -52,12 +54,12 @@
 
 
 .card-items {
-	overflow: hidden;
+	flex-basis: auto;
 }
 
 .card-item{
-	min-width: 190px;
-	max-width: fit-content;
+	
+	
 }
 
 .card-rating{
