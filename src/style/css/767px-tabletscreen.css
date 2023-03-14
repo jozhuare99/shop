@@ -1,9 +1,7 @@
 @media only screen and (max-width:767px){
 	.shopBody{
-		margin-top: 2.5rem !important;
+		margin-top: 1.5rem !important;
 	}
-	.card-item{
-		width: 32.50%;
-	}
+
 
 }

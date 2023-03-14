@@ -1,10 +1,8 @@
 @media only screen and (max-width:240px){
     .shopBody{
-        margin-top: 15px !important;
+        margin-top: 0rem !important;
     }
-    .card-item{
-        width: fit-content;
-    }
+ 
     .text-search-icon {
         font-size:small !important;
     }
