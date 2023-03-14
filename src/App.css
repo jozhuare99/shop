@@ -50,7 +50,10 @@
 	top:23px;
 }
 
-.card-body{
+.card-item{
+	min-width: 100px !important;
+	max-width: 165px !important;
+	
 }
 .text-wrap{
 	white-space: wrap;
