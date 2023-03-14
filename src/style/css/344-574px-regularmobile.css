@@ -1,6 +1,8 @@
 @media only screen and (max-width:574px) and (min-width:344px){
-    .product-title{
-        text-overflow: clip;
-        color: aliceblue;
-    }
+ .card-item{
+    width: 50%;
+ }
+ .shopBody{
+   margin-top: 35px !important;
+ }
 }

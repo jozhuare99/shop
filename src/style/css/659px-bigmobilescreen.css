@@ -1,9 +1,5 @@
 @media only screen and (max-width:659px){
-	.card-items{
-		padding-left: auto;
-		padding-right: auto;
-	}
 	.card-item{
-		width: 45%;
+		width: 50%;
 	}
 }

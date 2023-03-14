@@ -15,13 +15,34 @@ export default function Body() {
     {id: 4, name: 'Nokia 5710 XpressAudio, Unisoc T107, 128MB + 48MB, Removable 1450 mAh Battery, Cellphone', price: 4190, percentDiscount: 0, rating: 62, sold: 100, reviewed: 85,  location: 'Metro Manila', imgLink: 'https://lzd-img-global.slatic.net/g/p/87a76cefdb37037f1b1036ff349cf8b0.png_720x720q80.png_.webp'},
   ]
 
+  let initialItems2 = [
+    {id: 1, name: 'Samsung Galaxy s23 8GB+128GB/256/Galaxy s23+ 8GB +256GB/512GB Dual Sim 5G', price: 42990, percentDiscount: 20, reviewed: 1, rating: 100, sold: 2, location: 'Bulacan', imgLink: 'https://lzd-img-global.slatic.net/g/p/d72700f9ce5d7ff78a2cf574d5687ed1.png_720x720q80.png_.webp'},
+    {id: 0, name: 'Apple iPhone 14', price: 54390, percentDiscount: 12, rating: 80, sold: 20, reviewed: 10, location: 'Metro Manila', imgLink: 'https://lzd-img-global.slatic.net/g/p/c3a87a020e49a43809142e7bef034494.jpg_720x720q80.jpg_.webp'},
+    {id: 3, name: 'Google Pixel 6 PRO 5G 12GB/128GB [Unlocked] with Free Google Pixel Buds', price: 34990, percentDiscount: 25, rating: 50, sold: 2, reviewed: 1,  location: 'Metro Manila', imgLink: 'https://lzd-img-global.slatic.net/g/p/7045863a9aedd2c1e00d5fc2da333b97.png_720x720q80.png_.webp'},
+    {id: 4, name: 'Nokia 5710 XpressAudio, Unisoc T107, 128MB + 48MB, Removable 1450 mAh Battery, Cellphone', price: 4190, percentDiscount: 0, rating: 62, sold: 100, reviewed: 85,  location: 'Metro Manila', imgLink: 'https://lzd-img-global.slatic.net/g/p/87a76cefdb37037f1b1036ff349cf8b0.png_720x720q80.png_.webp'},
+    {id: 2, name: 'Xiaomi 13 12+256 Global Version [in 1+1 year warranty]', price: 44999, percentDiscount: 0, rating: 76, sold: 300, reviewed: 215,  location: 'Overseas', imgLink: 'https://lzd-img-global.slatic.net/g/p/e0dcae74dd5cd99e39cf26378011298d.png_720x720q80.png_.webp'},
+  ]
+
   const [items, setItems] = useState(initialItems)
+  const [items2, setItems2] = useState(initialItems2)
 
   return (
-    <Container className={'shopBody'}>
-      <Container className='card-items d-flex flex-wrap user-select-none justify-content-start' >
-        <Items items={items} />
-      </Container>
+    <Container className='user-select-none  shopBody d-flex flex-wrap align-items-start justify-content-start bg-warning mx-auto'>
+        <div className='card-item d-flex flex-column bg-warning mx-auto'>
+          <Items items={items} />
+        </div>
+        <div className='card-item  d-flex flex-column bg-warning mx-auto'>
+          <Items items={items2} />
+        </div>
+        <div className='card-item d-flex flex-column bg-warning '>
+          <Items items={items} />
+        </div>
+        <div className='card-item d-flex flex-column bg-warning '>
+          <Items items={items2} />
+        </div>
+        <div className='card-item d-flex flex-column bg-warning '>
+          <Items items={items} />
+        </div>
     </Container>
   )
 } 
@@ -31,7 +52,7 @@ function Items({items}){
   return (
     <>
       {items.map(item=>
-        <Card className='card-item  m-2 h-100 ' key={item.id}>
+        <Card className='my-2 mx-1 h-100 bg-danger' key={item.id}>
         <Card.Img variant="top" src={item.imgLink} />
         <div className=' my-0 card-rating'>
           <p className='my-0 ms-1 text-small'>
@@ -63,11 +84,11 @@ function Items({items}){
             ( {item.reviewed} )
           </p>
         </div>
-        <Card.Body className=' p-2 text-wrap'>
+        <Card.Body className=' p-2'>
           <Card.Title className='mb-0  text-smaller '>{item.name}</Card.Title>
           <Card.Text className='m-0 text-large p-0'>&#8369;{item.price}</Card.Text>
-          <p className=' text-tiny'>{item.percentDiscount}% discount off &#8369;{item.price * (item.percentDiscount/100)}</p>
-          <h5 className='text-medium line-height-0'>{item.sold} SOLD</h5>
+          <p className=' text-tiny mb-0'>{item.percentDiscount}% discount off &#8369;{item.price * (item.percentDiscount/100)}</p>
+          <p className='text-meduim mb-0'>{item.sold} SOLD</p>
           <p className='text-small mb-0 text-end'>{item.location}</p>
         </Card.Body>
       </Card>

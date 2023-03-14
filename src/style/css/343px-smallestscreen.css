@@ -5,4 +5,7 @@
 	.user-name{
         display: none;
     }
+	.shopBody{
+		margin-top: 35px !important;
+	  }
 }
