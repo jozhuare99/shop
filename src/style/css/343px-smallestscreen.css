@@ -1,14 +1,39 @@
 @media only screen and (max-width:343px){
-
+	.text-search-icon {
+        font-size:small !important;
+    }
+    .headerMaxHeight{
+        height: 10px ;
+        margin: auto;
+    }
+    .textInputSearch{
+        width: auto;
+    }
+    .btn-search {
+        line-height: 12px !important;
+        left: -4rem !important;
+        padding: 4px !important;
+        font-size: small;
+    }
+    .cartBagContainer{
+        margin-left: 10px !important;
+    }
+    
+    .text-cart-bag{
+        font-size: 1.8rem !important;
+        margin-top: 2px;
+    }
+    .cartNumberCount{
+        font-size: 15px !important ;
+    }
 	.user-name{
         display: none;
     }
 	.shopBody{
-		margin-top: 1.8em !important;
-	  }
+	margin-top: 1.8em !important;}
 
-	  .card-item{
-		min-width: 100% !important;
-		max-width: 100% !important;
-	  }
+	.card-item{
+	min-width: 80% !important;
+	max-width: 100% !important;
+	}
 }

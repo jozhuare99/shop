@@ -8,9 +8,9 @@ export default function Header() {
 
  return ( 
   <>
-   <Container className='my-2' >
-    <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight user-select-none p-0'>
-      <div className='d-flex ps-2 flex-nowrap flex-grow-1'>
+   <Container className='my-2 ' >
+    <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight  user-select-none p-0'>
+      <div className='d-flex ps-2 flex-nowrap flex-grow-1 '>
         <Nav.Item className="p-0 w-100 mx-auto">
           <Form className="p-0 m-0">
           <InputGroup className="text-input-group-search d-flex justify-content-end align-content-center">

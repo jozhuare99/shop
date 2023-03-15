@@ -50,7 +50,7 @@ export default function Body() {
   return (
     <>
       <Container className='user-select-none shopBody'>
-         <div className='item-container d-flex flex-wrap flex-row overflow-auto w-100'>
+         <div className='item-container d-flex flex-wrap flex-row overflow-auto'>
           <Items items={items} />
          </div>
       </Container>
