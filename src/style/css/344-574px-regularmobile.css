@@ -1,6 +1,19 @@
+
+@media only screen and  (max-width:374px){
+	.card-item{
+		margin: auto !important;
+	}
+}
+
 @media only screen and (max-width:574px) and (min-width:344px){
 
  .shopBody{
    margin-top: 1.5rem !important;
  }
+ .card-item{
+	min-width: 130px !important;
+	max-width: auto !important;
+	width: auto !important;
+}
+
 }

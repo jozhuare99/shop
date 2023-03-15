@@ -1,3 +1,24 @@
+/* width */
+::-webkit-scrollbar {
+	width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+	border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: black; 
+	border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: #555; 
+  }
+
 
 .headerMaxHeight{
 	max-height: 3.1rem;
@@ -53,7 +74,7 @@
 .card-item{
 	min-width: 100px !important;
 	max-width: 165px !important;
-	
+
 }
 .text-wrap{
 	white-space: wrap;
@@ -62,6 +83,9 @@
 	
 }
 
+.item-container{
+	padding: 0 1rem !important;
+}
 
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');

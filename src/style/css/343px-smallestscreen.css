@@ -6,4 +6,9 @@
 	.shopBody{
 		margin-top: 1.8em !important;
 	  }
+
+	  .card-item{
+		margin-left: auto !important;
+		margin-right: auto !important;
+	  }
 }
