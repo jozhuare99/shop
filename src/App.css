@@ -1,11 +1,13 @@
 /* width */
 ::-webkit-scrollbar {
 	width: 5px;
+	height: 5px;
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
 	border-radius: 5px;
+	background: white; 
   }
    
   /* Handle */
@@ -84,8 +86,8 @@
 }
 
 .item-container{
-	padding-right: 1rem !important;
 	height: 500px;
+	width: 100% !important;
 }
 
 @import url('./style/css/1400px-maxscreen.css');
@@ -94,6 +96,5 @@
 @import url('./style/css/991px-laptopscreen.css');
 @import url('./style/css/767px-tabletscreen.css');
 @import url('./style/css/659px-bigmobilescreen.css');
-@import url('./style/css/344-574px-regularmobile.css');
-@import url('./style/css/343px-smallestscreen.css');
+@import url('./style/css/343px-smallestscreen.css');```````
 @import url('./style/css/240px-tinyscreen.css');
