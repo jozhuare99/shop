@@ -3,4 +3,8 @@
 	.shopBody{
 		margin-top: 0 !important;
 	}
+	.card-item{
+		min-width: 20% !important;
+		max-width: 22.5% !important;
+	}
 }

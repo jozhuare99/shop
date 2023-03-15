@@ -72,8 +72,8 @@
 }
 
 .card-item{
-	min-width: 100px !important;
-	max-width: 165px !important;
+	min-width: 100px ;
+	max-width: 165px ;
 
 }
 .text-wrap{
@@ -84,7 +84,8 @@
 }
 
 .item-container{
-	padding: 0 1rem !important;
+	padding-right: 1rem !important;
+	height: 500px;
 }
 
 @import url('./style/css/1400px-maxscreen.css');
