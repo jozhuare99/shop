@@ -49,9 +49,9 @@ export default function Body() {
 
   return (
     <>
-      <Container className='user-select-none shopBody mx-auto'>
-         <div className='item-container d-flex flex-wrap flex-row justify-content-evenly w-100 px-auto'>
-         <Items items={items} />
+      <Container className='user-select-none shopBody'>
+         <div className='item-container d-flex flex-wrap flex-row overflow-auto w-100'>
+          <Items items={items} />
          </div>
       </Container>
     </>
@@ -63,7 +63,9 @@ function Items({items}){
   return (
     <>
       {items.map(item=>
-        item.name ? <Card className='card-item  me-auto mt-3 mx-sm-auto ' key={v1()}>
+        item.name ? 
+        <div className='card-item  float-start mx-2  mt-3 ' key={v1()}>
+        <Card className='' >
         <Card.Img variant="top" src={item.imgLink} />
         <div className=' my-0 card-rating'>
           <p className='my-0 ms-1 text-small'>
@@ -103,6 +105,7 @@ function Items({items}){
           <p className='text-small mb-0 text-end'>{item.location}</p>
         </Card.Body>
       </Card>
+      </div>
       :
       ''
       )}
