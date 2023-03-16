@@ -6,7 +6,8 @@ import {v1} from 'uuid'
 
 export default function Body() {
 
-  
+  const deviceheight = window.innerHeight;
+
   let emptyValue =  [
     {id: 0, name: '', price: 0, percentDiscount: 0, rating: 0, sold: 0, reviewed: 0, location: '', imgLink: ''},
   ]
