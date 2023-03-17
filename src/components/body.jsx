@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Card } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
 import {v1} from 'uuid'
+import Categories from './category'
 
 
 export default function Body() {
@@ -55,6 +56,7 @@ export default function Body() {
           <Items items={items} />
          </div>
       </Container>
+      <Categories/>
     </>
   )
 } 
