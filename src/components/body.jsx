@@ -51,7 +51,7 @@ export default function Body() {
   return (
     <>
       <Container className='user-select-none shopBody'>
-         <div className='item-container d-flex flex-wrap flex-row overflow-auto'>
+         <div style={{height: `${deviceheight-116}px`}} className='item-container d-flex flex-wrap flex-row overflow-auto'>
           <Items items={items} />
          </div>
       </Container>
