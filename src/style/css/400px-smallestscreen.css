@@ -1,4 +1,8 @@
-@media only screen and (max-width:343px){
+@media only screen and (max-width:399px){
+    .card-item{
+        min-width: 80% !important;
+        max-width: 100% !important;
+        }
 	.text-search-icon {
         font-size:small !important;
     }
@@ -32,8 +36,5 @@
 	.shopBody{
 	margin-top: 1.8em !important;}
 
-	.card-item{
-	min-width: 80% !important;
-	max-width: 100% !important;
-	}
+
 }

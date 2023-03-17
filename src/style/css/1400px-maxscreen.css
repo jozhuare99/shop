@@ -1,9 +1,9 @@
-/* more max */
+
 @media only screen and (min-width:1400px){
 
+    .card-item{
+        min-width: 14% !important;
+        max-width: 15.4% !important;
+    }
 }
 
-/* big laptop */
-@media only screen and (max-width:1400px){
-
-}

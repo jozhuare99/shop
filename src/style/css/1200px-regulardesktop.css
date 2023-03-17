@@ -1,6 +1,14 @@
 @media only screen and (max-width:1200px){
-    
+    .card-item{
+		min-width: 18% !important;
+		max-width: 23.2% !important;
+	}
 }
-@media only screen and (min-width:1200px){
 
+@media only screen and (min-width:1201px){
+    .card-item{
+        min-width: 13% !important;
+        max-width: 15.2% !important;
+    }
+    
 }

@@ -1,0 +1,10 @@
+@media only screen and (max-width:574px){
+	.shopBody{
+	margin-top: 2.5rem !important;
+	}
+	.card-item{
+	min-width: 40% !important;
+	max-width: 45.9% !important;
+	}
+
+}
