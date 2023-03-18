@@ -13,12 +13,11 @@ export default function Categories(){
 
     return(
         <>
-          <div className={`w-auto d-flex flex-nowrap `}>
+          <div className={`w-auto d-flex flex-nowrap pt-1`}>
           { initialSVG.map(data =>
 	 	  		<Nav.Item key={data.name} className={'mx-auto'}>
 					<div className='profileContainer h-100 px-1 d-flex align-items-center'>
-            <img role='button' src={data.icon} style={{width:'5rem',height:'5rem '}} className={`text-profile-icon text-dark mx-auto`} />
-						<p role='button' className='text-navigation-style ms-1 my-auto'>{data.name}</p>
+            <img role='button' src={data.icon} style={{width:'2.5rem',height:'2.5rem '}} className={`text-profile-icon text-dark mx-auto`} />
 					</div>
 	 	      	</Nav.Item>
           )}
