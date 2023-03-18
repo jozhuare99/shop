@@ -55,8 +55,8 @@ export default function Body() {
          <div style={{height: `${deviceheight-116}px`}} className='item-container d-flex flex-wrap flex-row overflow-auto'>
           <Items items={items} />
          </div>
+        <Categories/>
       </Container>
-      <Categories/>
     </>
   )
 } 
