@@ -96,7 +96,7 @@
 }
 
 .offcanvass-nav{
-	width: 20px;
+	width: fit-content !important; 
 }
 
 @import url('./style/css/1400px-maxscreen.css');
