@@ -109,6 +109,11 @@
 .index-100{
 	z-index: 100 !important
 }
+
+.bar-categories{
+	bottom: 1rem;
+	left: 1rem;
+}
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');
 @import url('./style/css/998px-laptopscreen.css');

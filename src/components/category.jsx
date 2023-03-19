@@ -13,11 +13,9 @@ export default function Categories(){
 
     return(
         <>
-            <Navbar expand='md' className='index-100 bg-info py-0'>
-                <Navbar.Toggle aria-controls='offcanvassNavbar' className='position-absolute bg-body ms-1 mb-1 p-1' />
+            <Navbar expand='md' className='index-100 py-0'>
+                <Navbar.Toggle aria-controls='offcanvassNavbar' className='bar-categories position-absolute bg-body ms-1 mb-1 p-1' />
                 <Navbar.Offcanvas className='offcanvass-nav' id='offcanvassNavbar' aria-labelledby='offcanvassNavbar' placement='end'>
-                  <Offcanvas.Header className='mx-auto ps-1' closeButton >
-                  </Offcanvas.Header>
                   <Offcanvas.Body>
                   <div className='bottom-categories pt-1'>
                     { initialSVG.map(data =>
