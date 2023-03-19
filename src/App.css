@@ -114,6 +114,17 @@
 	bottom: 1rem;
 	left: 1rem;
 }
+
+.float-chat{
+	bottom: 1rem;
+	right: 1rem;
+	
+}
+
+.flip-horizontaly {
+	transform: scaleX(-1)
+}
+
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');
 @import url('./style/css/998px-laptopscreen.css');

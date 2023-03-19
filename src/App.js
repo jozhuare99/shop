@@ -3,6 +3,7 @@ import { Outlet, NavLink, useLoaderData, Form, redirect, useNavigation, useSubmi
 import './App.css'
 import './style/bootstrap.css'
 import Header from './components/header'
+import Chat from './components/chat'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <div className={navigation.state === 'loading' ? 'bg-danger': ''}>
           <Outlet />
       </div>
+      <Chat/>
     </>
   );
 }
