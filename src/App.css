@@ -106,6 +106,9 @@
 	width: fit-content !important; 
 }
 
+.index-100{
+	z-index: 100 !important
+}
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');
 @import url('./style/css/998px-laptopscreen.css');

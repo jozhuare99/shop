@@ -13,9 +13,8 @@ export default function Categories(){
 
     return(
         <>
-          
-            <Navbar expand='md p-0'>
-                <Navbar.Toggle aria-controls='offcanvassNavbar' />
+            <Navbar expand='md' className='index-100 bg-info py-0'>
+                <Navbar.Toggle aria-controls='offcanvassNavbar' className='position-absolute bg-body ms-1 mb-1 p-1' />
                 <Navbar.Offcanvas className='offcanvass-nav' id='offcanvassNavbar' aria-labelledby='offcanvassNavbar' placement='end'>
                   <Offcanvas.Header className='mx-auto ps-1' closeButton >
                   </Offcanvas.Header>
