@@ -13,9 +13,7 @@ function App() {
       <Header/>
 
       <div className={navigation.state === 'loading' ? 'bg-danger': ''}>
-   
           <Outlet />
-      
       </div>
     </>
   );
