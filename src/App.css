@@ -89,6 +89,16 @@
 	width: 100% !important;
 }
 
+.bottom-categories {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.offcanvass-nav{
+	width: 20px;
+}
+
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');
 @import url('./style/css/998px-laptopscreen.css');

@@ -1,4 +1,4 @@
-import {Nav} from 'react-bootstrap'
+import {Nav, Stack, Navbar, Container, Offcanvas} from 'react-bootstrap'
 import Appliances from '../assets/SVG/cat-appliances.svg'
 import Beauty from '../assets/SVG/cat-beauty.svg'
 import Electronics from '../assets/SVG/cat-electronics.svg'
@@ -13,15 +13,25 @@ export default function Categories(){
 
     return(
         <>
-          <div className={`w-auto d-flex flex-nowrap pt-1`}>
-          { initialSVG.map(data =>
-	 	  		<Nav.Item key={data.name} className={'mx-auto'}>
-					<div className='profileContainer h-100 px-1 d-flex align-items-center'>
-            <img role='button' src={data.icon} style={{width:'2.5rem',height:'2.5rem '}} className={`text-profile-icon text-dark mx-auto`} />
-					</div>
-	 	      	</Nav.Item>
-          )}
-          </div>
+          
+            <Navbar expand='md p-0'>
+                <Navbar.Toggle aria-controls='offcanvassNavbar' />
+                <Navbar.Offcanvas className='offcanvass-nav' id='offcanvassNavbar' aria-labelledby='offcanvassNavbar' placement='end'>
+                  <Offcanvas.Header closeButton>
+                  </Offcanvas.Header>
+                  <Offcanvas.Body>
+                  <div className='bottom-categories pt-1 bg-info'>
+                    { initialSVG.map(data =>
+                    <Nav.Item key={data.name} className={'mx-auto'}>
+                    <div className='profileContainer h-100 px-1 d-flex align-items-center'>
+                      <img role='button' src={data.icon} style={{width:'2.5rem',height:'2.5rem '}} className={`text-profile-icon text-dark mx-auto`} />
+                    </div>
+                    </Nav.Item>
+                    )}
+                  </div>
+                  </Offcanvas.Body>
+                </Navbar.Offcanvas>
+            </Navbar>
         </>
     )
 }
@@ -36,8 +46,8 @@ const initialCategory = [
   
 
 const initialSVG= [
-  {name:  'flash', icon: Appliances},
-  {name:  'appliances', icon: Beauty},
+  {name:  'electronics', icon: Electronics},
+  {name:  'Appliances', icon: Appliances},
   {name:  'health', icon: Health},
   {name:  'games', icon: Games},
   {name:  'toys', icon: Toys},
