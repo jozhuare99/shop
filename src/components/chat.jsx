@@ -6,9 +6,9 @@ export default function Chat(){
 
   return(
     <>
-    <Container>
-      <div>
-        <i className='float-chat flip-horizontaly position-absolute  bi bi-chat'></i>
+    <Container className='position-relative'>
+      <div className='float-chat flip-horizontaly position-absolute'>
+        <i role='button' className='fs-1 bi bi-chat-fill text-info border-light border-2'></i>
       </div>
     </Container>
     </>
