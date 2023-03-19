@@ -17,9 +17,9 @@ export default function Categories(){
             <Navbar expand='md p-0'>
                 <Navbar.Toggle aria-controls='offcanvassNavbar' />
                 <Navbar.Offcanvas className='offcanvass-nav' id='offcanvassNavbar' aria-labelledby='offcanvassNavbar' placement='end'>
-                  <Offcanvas.Header closeButton>
+                  <Offcanvas.Header className='mx-auto ps-1' closeButton >
                   </Offcanvas.Header>
-                  <Offcanvas.Body className='p-1'>
+                  <Offcanvas.Body>
                   <div className='bottom-categories pt-1'>
                     { initialSVG.map(data =>
                     <Nav.Item key={data.name} className={'mx-auto'}>

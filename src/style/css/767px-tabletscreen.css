@@ -1,8 +1,11 @@
 @media only screen and (max-width:767px){
+	.bottom-categories {
+		gap: 2rem;
+	}
 	.shopBody{
 		margin-top: 2.5rem !important;
 	}
-	
+
 	.card-item{
 		min-width: 18% !important;
 		max-width: 21.8% !important;

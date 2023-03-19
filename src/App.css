@@ -34,14 +34,21 @@
 	  padding-right: 5.7rem;
 }
 .textInputSearch:focus{
-	  box-shadow: none ;
+	  box-shadow: none !important;
 		z-index: 1 ;
+}
+.textInputSearch:hover{
+	box-shadow: none !important;
+	z-index: 1 ;
 }
 
 .btn-search{
 	left: -5rem;
-	margin-right: -4.7rem
+	margin-right: -4.7rem;
+	z-index: 9 !important;
 }
+
+
 
 
 .text-cart-bag{
