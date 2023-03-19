@@ -2,10 +2,12 @@
 	.shopBody{
 		margin-top: 2.5rem !important;
 	}
+	
 	.card-item{
 		min-width: 18% !important;
 		max-width: 21.8% !important;
 	}
+
 	.bottom-categories {
 		display: flex;
 		flex-direction: column;
