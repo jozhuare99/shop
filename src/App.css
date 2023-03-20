@@ -124,6 +124,11 @@
 	transform: scaleX(-1)
 }
 
+.chat-box {
+	bottom: 4rem;
+	right: 2rem;
+}
+
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');
 @import url('./style/css/998px-laptopscreen.css');
