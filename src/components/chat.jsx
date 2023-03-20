@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { Container, Stack, Row, Col, Card, Button } from 'react-bootstrap'
+import { Container, Stack, Card, Button, Form, InputGroup } from 'react-bootstrap'
 
 
 export default function Chat(){
@@ -21,9 +21,8 @@ function ChatBox(){
 
   return (
   <div className='chat-box d-flex position-absolute bg-opacity-25 bg-warning'>
-    <Container className='py-2' fluid>
-      <Row gap={2} className='justify-content-center row'>
-        <Col xl={4} lg={3} sm={2}>
+      <Stack gap={2} className='justify-content-center row'>
+
           <Card className=''>
             <Card.Body>
               <Stack className='flex-row justify-content-start mb-4'>
@@ -41,10 +40,16 @@ function ChatBox(){
               </Stack>
               
             </Card.Body>
+            <Card.Footer>
+              <Form className="p-0 m-0">
+                <InputGroup className="text-input-group-search d-flex justify-content-end align-content-center">
+                 <Form.Control placeholder="Samsung Galaxy" aria-label="Username" aria-describedby="basic-addon1" className='textInputSearch rounded border-dark py-0 my-0 text-dark'/>
+                <Button className='btn-search text-dark bg-white  my-auto border-dark rounded-start'>Search</Button>
+              </InputGroup>
+              </Form>
+            </Card.Footer>
           </Card>
-        </Col>
-      </Row>
-    </Container>
+      </Stack>
   </div>
   )
 
