@@ -25,17 +25,17 @@ function ChatBox({showMessage}){
       <div className='chat-box  d-flex position-absolute'>
           <Stack gap={2} className='bottom'>
 
-              <Card className='bg-transparent border-0 chat-box-size overflow-auto'>
+              <Card className=' border-0 chat-box-size overflow-auto'>
                 <Card.Body>
                   <Stack className='flex-row justify-content-start mb-4'>
                     <i role='button' className='text-profile-icon text-dark fs-3  mx-auto bi bi-shop'></i>
-                    <div className='p-2 ms-3 border rounded-2 bg-light' >
+                    <div className='p-2 ms-3 border border-dark rounded-2 bg-light' >
                       <p className=' small mb-0'>Hello and Thank you for visiting our Shop. hsajdhaksdhbash aksdhg iaysg dguyask d</p>
                     </div>
                   </Stack>
 
                   <Stack className='flex-row justify-content-end mb-4'>
-                    <div className='p-2 border rounded-2 bg-light me-2'>
+                    <div className='p-2 border border-dark rounded-2 bg-light me-2'>
                       <p className=' small mb-0'>Hi how to order?</p>
                     </div>
                     <i role='button' className="user-profile-icon text-dark fs-3 bi bi-person-circle"></i>

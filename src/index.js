@@ -6,9 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import ErrorPage from './404'
 import Body from "./components/body";
+import About from "./routes/about"
 
 // import { loader as rootLoader, action as rootAction, }  from './routes/Root'
-// import Contact, {loader as contactLoader, action as contactAction} from './routes/contact'
 // import EditContact,  {
 //   action as editAction,
 // }  from "./routes/edit";
@@ -36,12 +36,12 @@ const router = createBrowserRouter([
            ],
         },
         {index: true, element: <Body />},
-        // {
-        //   path: "contacts/:contactId",
-        //   element: <Contact />,
-        //   loader: contactLoader,
-        //   action: contactAction
-        // },
+        {
+          path: "about",
+          element: <About />,
+          // loader: contactLoader,
+          // action: contactAction
+        },
         // {
         //   path: "contacts/:contactId/edit",
         //   element: <EditContact />,

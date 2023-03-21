@@ -43,9 +43,6 @@ export default function Body() {
       [11,'Jordan Men\'s Air T-Shirt - White',253.82 ,36 ,98 ,13989 ,2853 ,'Bulacan','https://lzd-img-global.slatic.net/g/p/170e4af737326a65c567b8a622695408.jpg_720x720q80.jpg_.webp'],
      ]
      let initialItems = createItems(data)
-     
-
-
     setItems(initialItems)
   },[])
 
