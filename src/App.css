@@ -48,9 +48,6 @@
 	z-index: 9 !important;
 }
 
-
-
-
 .text-cart-bag{
 	font-size: 2.9rem;
 	line-height:0;
@@ -127,6 +124,15 @@
 .chat-box {
 	bottom: 7.4rem;
 	right: 2rem;
+	width: 20rem;
+}
+
+.text-message-chat{
+	resize: none;
+}
+
+.chat-box-size{
+	height: 20rem;
 }
 
 @import url('./style/css/1400px-maxscreen.css');
@@ -137,4 +143,4 @@
 @import url('./style/css/659px-bigmobilescreen.css');
 @import url('./style/css/574px-regularmobile.css');
 @import url('./style/css/400px-smallestscreen.css');
-@import url('./style/css/240px-tinyscreen.css');
+@import url('./style/css/240px-tinyscreen.css')
