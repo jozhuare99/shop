@@ -134,7 +134,24 @@
 .chat-box-size{
 	height: 20rem;
 }
+.q-retail{
+	bottom: 1rem;
+	left: 2rem;
+}
+.text-justify{
+	text-align: justify;
+}
+.text-indent-1{
+	text-indent: 4rem;
+}
+.shadow-white{
+	text-shadow:  white 0 0 3px;
+}
 
+.size-4{
+	height: 4rem;
+	width: 4rem;
+}
 @import url('./style/css/1400px-maxscreen.css');
 @import url('./style/css/1200px-regulardesktop.css');
 @import url('./style/css/998px-laptopscreen.css');

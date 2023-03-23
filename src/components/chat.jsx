@@ -7,8 +7,8 @@ export default function Chat({showChat, setSC}){
     <>
     <Container className='position-relative'>
       <div className='float-chat flip-horizontaly position-fixed'>
-        <i role='button' onClick={()=>{console.log('am i being called?') 
-         setSC(!showChat)}} className='fs-1 bi bi-chat-fill text-black'></i>
+        <i role='button' onClick={()=>{
+         setSC(!showChat)}} className='fs-1 bi bi-chat-fill text-black shadow-white'></i>
       </div>
       <ChatBox showMessage={showChat}/>
     </Container>
