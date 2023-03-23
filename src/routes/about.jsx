@@ -1,7 +1,7 @@
 import {useState} from 'react'
 import { Form, useLoaderData } from 'react-router-dom'
-import { Container } from 'react-bootstrap'
-
+import { Container, Image } from 'react-bootstrap'
+import About2Cover from '../assets/SVG/about-img.svg'
 
 export default function About(){
 
@@ -9,8 +9,11 @@ export default function About(){
   return (
     <>
         <Container className='user-select-none shopBody'>
-         <div style={{height: `${deviceheight-85}px`}} className='item-container d-flex flex-wrap flex-row overflow-auto'>
-          <h1>This is About page</h1>
+         <div className='item-container d-flex flex-wrap flex-row overflow-auto'>
+          <Container className='' fluid>
+            <Image fluid src={About2Cover}></Image>
+            <h2 className=' position-absolute text-light'>Quick Retail</h2>
+          </Container>
          </div>
         </Container>
      

@@ -2,15 +2,15 @@ import {useState, useEffect} from 'react'
 import { Container, Stack, Card, Button, Form, InputGroup } from 'react-bootstrap'
 
 
-export default function Chat(){
-  const [showMessage, setShowMessage] = useState(false)
+export default function Chat({showChat, setSC}){
   return(
     <>
     <Container className='position-relative'>
-      <div className='float-chat flip-horizontaly position-absolute'>
-        <i role='button' onClick={()=>setShowMessage(!showMessage)} className='fs-1 bi bi-chat-fill text-black'></i>
+      <div className='float-chat flip-horizontaly position-fixed'>
+        <i role='button' onClick={()=>{console.log('am i being called?') 
+         setSC(!showChat)}} className='fs-1 bi bi-chat-fill text-black'></i>
       </div>
-      <ChatBox showMessage={showMessage}/>
+      <ChatBox showMessage={showChat}/>
     </Container>
     </>
   )
@@ -22,7 +22,7 @@ function ChatBox({showMessage}){
 
   return (
       showMessage && 
-      <div className='chat-box  d-flex position-absolute'>
+      <div className='chat-box  d-flex position-fixed'>
           <Stack gap={2} className='bottom'>
 
               <Card className=' border-0 chat-box-size overflow-auto'>

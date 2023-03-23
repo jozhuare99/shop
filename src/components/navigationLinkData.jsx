@@ -1,4 +1,4 @@
-import {Nav} from 'react-bootstrap'
+import { NavLink } from "react-router-dom"
 
 const initialData = [
 {name:  'home', icon: 'shop', to: '/'},
@@ -12,14 +12,14 @@ export default function NavigationLinkData(){
 
 	 return (
 	 	  	initialData.map(data =>
-	 	  		<Nav.Item key={data.name} className={'mx-auto'}>
+	 	  		<div key={data.name} className={'mx-auto'}>
 					<div className=' h-100  overflow-hidden '>
-						<Nav.Link href={data.to} className='px-1 d-flex justify-content-between align-items-center'>
+						<NavLink to={data.to} className='px-1 d-flex justify-content-between align-items-center'>
 						<i  className={`text-profile-icon text-dark fs-3  mx-auto bi bi-${data.icon}`}></i>
 						<p className='text-navigation-style ms-1 my-auto'>{data.name}</p>
-						</Nav.Link>
+						</NavLink>
 					</div>
-	 	      	</Nav.Item>
+	 	      	</div>
 	 	  	)
 	 	  
 	 )

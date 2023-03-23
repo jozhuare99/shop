@@ -8,7 +8,7 @@ import Chat from './components/chat'
 
 function App() {
   const navigation = useNavigation()
-
+  const [showChat, setShowChat] = useState(false)
   return (
     <>
       <Header/>
@@ -16,7 +16,7 @@ function App() {
       <div className={navigation.state === 'loading' ? 'bg-danger': ''}>
           <Outlet />
       </div>
-      <Chat/>
+      <Chat showChat={showChat} setSC={setShowChat}/>
     </>
   );
 }
