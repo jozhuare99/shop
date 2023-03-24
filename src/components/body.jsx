@@ -27,6 +27,28 @@ export default function Body() {
       }
       return items;
     }
+    const productList = [
+      {
+        id: '0',
+        name: 'Original Heavy MultiFunction Socket Plug Universal Socket Power Strip with 9 Power Socket + 2 USB Ports Safety Switch Protection Socket Charger Adapter',
+        price: 380,
+        percentDiscount: 67,
+        lovePercent: 98,
+        soldOut: 90,
+        reviewed: 150,
+        location: 'Metro Manila',
+        stock: 9,
+        images: [
+          'https://lzd-img-global.slatic.net/g/p/96a5bf4199ab54112f8ae265f3101584.png_720x720q80.png_.webp',
+          'https://lzd-img-global.slatic.net/g/p/1eef762c4a7b583385a0a20b839e0d71.png_720x720q80.png_.webp',
+          'https://lzd-img-global.slatic.net/g/p/8083b6b6423ead1ef584ad005969c7a1.png_720x720q80.png_.webp',
+          'https://lzd-img-global.slatic.net/g/p/425ce6118ab60ba73e3e0ff98cf7f4bd.png_720x720q80.png_.webp',
+          'https://lzd-img-global.slatic.net/g/p/a91bfebcae67f10a31b41e723644f78e.png_720x720q80.png_.webp',
+          ],
+        
+      }
+    ]
+
      let data = [
       [0,'Apple iPhone 14',54390,12,80,20,10,'Metro Manila','https://lzd-img-global.slatic.net/g/p/c3a87a020e49a43809142e7bef034494.jpg_720x720q80.jpg_.webp'],
       [5,'Astron Inverter Class .6HP Aircon with remote (improved R-32 energy-efficient refrigerant 9.9 EER window-type air conditioner TC-LRE60 built-in air filter anti-rust body white)',8549,5,94,2819,661,'Metro Manila','https://lzd-img-global.slatic.net/g/p/ab1cbd38146dbfaaf8d135549acac972.jpg_720x720q80.jpg_.webp'],
