@@ -26,7 +26,7 @@ export default function About(){
               <i className='bi bi-bus-front text-light fs-3 ms-1'></i>
               <div className='float-start'>
               <i className='bi bi-airplane text-light fs-3 ms-1'></i>
-              <h2 className='ps-1 position-static text-light '>Local and International</h2>
+              <h2 className='ps-1 position-static text-light '>Local not International</h2>
               </div>
             </div>
             <div className='px-4 '>
