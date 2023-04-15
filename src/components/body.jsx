@@ -3,11 +3,14 @@ import { Card } from 'react-bootstrap'
 import { Container } from 'react-bootstrap'
 import {v1} from 'uuid'
 import Categories from './category'
+import axios from 'axios';
 
 
 export default function Body() {
 
   const deviceheight = window.innerHeight;
+
+  const [data, setData] = useState([])
 
   let emptyValue =  [
     {id: 0, name: '', price: 0, percentDiscount: 0, rating: 0, sold: 0, reviewed: 0, location: '', imgLink: ''},
@@ -15,6 +18,18 @@ export default function Body() {
   const [items, setItems] = useState(emptyValue)
 
   useEffect(()=>{
+
+    const fetchData = async () =>{
+      const result = await axios('http://localhost:3002/api/data')
+      setData(result.data)
+    }
+
+    fetchData()
+
+
+
+
+    
     function  createItem(id, name, price, percentDiscount,rating,sold,reviewed,location,imgLink){
       return {id, name, price, percentDiscount,rating,sold,reviewed,location,imgLink}
     }

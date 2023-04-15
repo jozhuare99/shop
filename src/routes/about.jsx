@@ -43,7 +43,7 @@ export default function About(){
             </div>
             <div className='px-4 '>
               <p className='text-light text-justify text-indent-1'>At shop, we harness both technologies to redefine the retial experience, Leveraging data in real time allows us to quickly adapt demands and conditions. We connect consumers to the brans, to create customised experiences and have evolved into a retail destination that customers come to shop an d entertain and we push the blockage bounderies. Project Voyeager, our Technology Stack jointly developed with facebbin, powers by most scalable and quicker product and solutions for the next year.
-</p>
+            </p>
             </div>
             <div className='ps-4 mt-1 d-flex flex-nowrap justify-content-start align-items-center'>
               <h2 className='ps-1 position-static text-light '>Payments</h2>
@@ -55,7 +55,7 @@ export default function About(){
             </div>
             <div className='px-4 '>
               <p className='text-light text-justify text-indent-1'>Ensuring that every little transaction customer made in our platform must be secured and accurate, by partnering the most secure financial sevices infrastructure, In a region still at varying stages of cash, we have evolved our payment system to the latest payment system available online including crypto currencies, e payment, card payment because we really understand the customer needs thats why we give them a lot of options to pay without hesitation while easing customers into digital payments thuogh intuitive solutions they have.
-</p>
+              </p>
             </div>
           </Container>
          </div>
