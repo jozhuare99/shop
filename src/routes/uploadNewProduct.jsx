@@ -6,7 +6,7 @@ import Core from '../assets/SVG/core.svg'
 import axios from 'axios'
 
 
-export default function uploadNewProduct(){
+export default function UploadNewProduct(){
   const [product,setProduct] = useState({})
 
   const handleProductSubmit = async (e)=>{
@@ -27,9 +27,10 @@ export default function uploadNewProduct(){
             <input type='number' placeholder='Price' value={product.price} onChange={(e) => setProduct({ ...product, price: e.target.value})} />
             <input type='number' placeholder='Price' value={product.price} onChange={(e) => setProduct({ ...product, price: e.target.value})} />
             
+            <input type='submit' value='Add Product'/>
           </form>
         </Container>
-     
+        
     </>
   )
 }

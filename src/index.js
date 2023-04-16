@@ -7,6 +7,8 @@ import {createBrowserRouter,RouterProvider} from 'react-router-dom'
 import ErrorPage from './404'
 import Body from "./components/body";
 import About from "./routes/about"
+import UploadNewProduct from './routes/uploadNewProduct'
+import SellerRoot from './routes/SellerRoot';
 
 // import { loader as rootLoader, action as rootAction, }  from './routes/Root'
 // import EditContact,  {
@@ -26,12 +28,12 @@ const router = createBrowserRouter([
            errorElement: <ErrorPage />,
           children: [
              { index: true, element: <Body /> },
-        //     {
-        //       path: "contacts/:contactId",
-        //       element: <Contact />,
-        //       loader: contactLoader,
-        //       action: contactAction,
-        //     },
+            // {
+            //   path: "uploadproduct",
+            //   element: <UploadNewProduct />,
+              // loader: contactLoader,
+              // action: contactAction,
+            // },
         //     /* the rest of the routes */
            ],
         },
@@ -55,6 +57,16 @@ const router = createBrowserRouter([
         //  }
       ],
   },
+  {
+    path: '/seller/',
+    element: <SellerRoot />,
+    children: [
+      {
+        path: 'productupload',
+        element: <UploadNewProduct />
+      }
+    ]
+  }
 
 ])
 
