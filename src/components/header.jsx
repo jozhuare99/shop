@@ -9,7 +9,7 @@ export default function Header() {
  return ( 
   <>
    <Container className='my-2 ' >
-    <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight  user-select-none p-0'>
+    <Nav variant='' defaultActiveKey={'/'} className='headerMaxHeight user-select-none p-0'>
       <div className='d-flex ps-2 flex-nowrap flex-grow-1 '>
         <Nav.Item className="p-0 w-100 mx-auto">
           <Form className="p-0 m-0">
@@ -21,25 +21,27 @@ export default function Header() {
         </Form>
         </Nav.Item>
         <Nav.Item>
-          <Container  className='h-100 cartBagContainer px-2'>
-            <i role='button' className="text-cart-bag text-dark bi bi-bag-fill"></i>
+          <Container  className='cartBagContainer px-2'>
+          <Nav.Link href='#' onClick={()=>{console.log('clicked'); }} className='p-0 d-flex text-decoration-none align-items-center text-center justify-content-center'>
+            <i role='button' className="fs-1 text-cart-bag text-dark bi bi-bag-fill"></i>
             <p role='button' className='cartNumberCount text-white  position-absolute mx-auto mt-4 '>9</p>
-         
+            </Nav.Link>
           </Container>
         </Nav.Item>
       </div>
       <div className={`w-auto float-end d-flex flex-nowrap flex-grow-1`}>
-        <Nav.Item className='mx-auto'> 
-          <div className='profileContainer h-100  d-flex justify-content-between align-items-center'>
-            <Nav.Link href='account'>
+      
+        <div className={'mx-auto'}>
+					<div className=' h-100  overflow-hidden '>
+          <Nav.Link href='account' className="px-1 d-flex justify-content-between align-items-center text-decoration-none">
 
-              <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
-              <p role='button' className='user-name my-auto'>name</p>
-        
-            </Nav.Link>
-          </div>
-        </Nav.Item>
-        <NavigationLinkData/>
+            <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
+            <p role='button' className='user-name my-auto'>name</p>
+      
+          </Nav.Link>
+         </div>
+        </div>       
+ <NavigationLinkData/>
       </div>
      </Nav>
   </Container>
