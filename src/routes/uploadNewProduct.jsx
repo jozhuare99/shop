@@ -7,15 +7,11 @@ import axios from 'axios'
 import cityData from '../data/City.json'
 
 
-export default  function UploadNewProduct() {
-  const data =  function(){
-    if (typeof cityData !== "string"){
-      console.log('not a valid String')
-      JSON.stringify(cityData)
-    }
-    const city =  JSON.parse(cityData)
-    return city
-  }
+export default function UploadNewProduct() {
+  // const data =   JSON.parse(cityData)
+  // console.log(data)
+  
+
   const [product, setProduct] = useState({})
   const [inputArray, setInputArray] = useState(new Array(5).fill(''))
 
@@ -38,29 +34,33 @@ export default  function UploadNewProduct() {
 
 
   // Address Selection
-  const [regionName, setRegionName] = useState('');
-  const [provinceList, setProvinceList] = useState([]);
-  const [municipalityList, setMunicipalityList] = useState([]);
-  const [barangayList, setBarangayList] = useState([]);
+  // const [regionName, setRegionName] = useState('');
+  // const [provinceList, setProvinceList] = useState([]);
+  // const [municipalityList, setMunicipalityList] = useState([]);
+  // const [barangayList, setBarangayList] = useState([]);
 
-  const handleRegionChange = (e) => {
-    setRegionName(e.target.value);
-    const selectedRegion = data.find((region) => region.region_name === e.target.value);
-    setProvinceList(selectedRegion.provinces);
-    setMunicipalityList([]);
-    setBarangayList([]);
-  };
 
-  const handleProvinceChange = (e) => {
-    const selectedProvince = provinceList.find((province) => province.province_name === e.target.value);
-    setMunicipalityList(selectedProvince.municipalities);
-    setBarangayList([]);
-  };
 
-  const handleMunicipalityChange = (e) => {
-    const selectedMunicipality = municipalityList.find((municipality) => municipality.municipality_name === e.target.value);
-    setBarangayList(selectedMunicipality.barangays);
-  };
+
+
+  // const handleRegionChange = (e) => {
+  //   setRegionName(e.target.value);
+  //   const selectedRegion = data.find((region) => region.region_name === e.target.value);
+  //   setProvinceList(selectedRegion.provinces);
+  //   setMunicipalityList([]);
+  //   setBarangayList([]);
+  // };
+
+  // const handleProvinceChange = (e) => {
+  //   const selectedProvince = provinceList.find((province) => province.province_name === e.target.value);
+  //   setMunicipalityList(selectedProvince.municipalities);
+  //   setBarangayList([]);
+  // };
+
+  // const handleMunicipalityChange = (e) => {
+  //   const selectedMunicipality = municipalityList.find((municipality) => municipality.municipality_name === e.target.value);
+  //   setBarangayList(selectedMunicipality.barangays);
+  // };
 
 
 
@@ -115,7 +115,7 @@ export default  function UploadNewProduct() {
       </Container>
 
       <h1>Address Selection Sample</h1>
-      <Container>
+      {/* <Container>
         <Card>
           <div>
             <label htmlFor="region">Region:</label>
@@ -165,7 +165,7 @@ export default  function UploadNewProduct() {
             </select>
           </div>
         </Card>
-      </Container>
+      </Container> */}
 
     </>
   )

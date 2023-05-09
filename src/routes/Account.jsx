@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet, NavLink, useLoaderData, Form, redirect, useNavigation, useSubmit, } from "react-router-dom";
 import {Container} from 'react-bootstrap'
 
-export default function SellerRoot(){
+export default function Account(){
 
   const navigation = useNavigation()
 

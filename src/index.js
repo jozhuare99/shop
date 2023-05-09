@@ -8,7 +8,7 @@ import ErrorPage from './404'
 import Body from "./components/body";
 import About from "./routes/about"
 import UploadNewProduct from './routes/uploadNewProduct'
-import SellerRoot from './routes/SellerRoot';
+import Account from './routes/Account';
 
 // import { loader as rootLoader, action as rootAction, }  from './routes/Root'
 // import EditContact,  {
@@ -58,8 +58,8 @@ const router = createBrowserRouter([
       ],
   },
   {
-    path: '/seller/',
-    element: <SellerRoot />,
+    path: '/account/',
+    element: <Account />,
     children: [
       {
         path: 'productupload',

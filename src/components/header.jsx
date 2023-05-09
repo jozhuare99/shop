@@ -1,4 +1,5 @@
 import React,{} from 'react'
+import { NavLink } from 'react-router-dom'
 import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 import NavigationLinkData from './navigationLinkData'
 
@@ -32,8 +33,12 @@ export default function Header() {
       <div className={`w-auto float-end d-flex flex-nowrap flex-grow-1`}>
         <Nav.Item className='mx-auto'> 
           <div className='profileContainer h-100  d-flex justify-content-between align-items-center'>
-            <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
-            <p role='button' className='user-name my-auto'>name..</p>
+            <Nav.Link href='account'>
+
+              <i role='button' className="text-profile-icon pe-1 text-dark fs-3 bi bi-person-circle"></i>
+              <p role='button' className='user-name my-auto'>name</p>
+        
+            </Nav.Link>
           </div>
         </Nav.Item>
         <NavigationLinkData/>
