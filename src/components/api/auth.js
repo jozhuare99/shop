@@ -1,12 +1,12 @@
-const AuthProvider = {
+const SampleAuthProvider = {
     isAuthenticated: false,
     signin(callback){
-        AuthProvider.isAuthenticated = true;
+        SampleAuthProvider.isAuthenticated = true;
         setTimeout(callback, 200)
     },
     signout(callback){
-        AuthProvider.isAuthenticated = false;
+        SampleAuthProvider.isAuthenticated = false;
     }
 }
 
-export { AuthProvider };
+export { SampleAuthProvider };
