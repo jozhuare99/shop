@@ -1,6 +1,9 @@
 import React from 'react'
-import { Outlet, NavLink, useLoaderData, Form, redirect, useNavigation, useSubmit, } from "react-router-dom";
+import { Outlet, useNavigation, 
+ // NavLink, useLoaderData, Form, redirect,  useSubmit, 
+} from "react-router-dom";
 import {Container} from 'react-bootstrap'
+import AccountHeader from '../components/header/accountHeader'
 
 export default function Account(){
 
@@ -8,6 +11,7 @@ export default function Account(){
 
   return(
     <>
+      <AccountHeader />
       <Container className='bg-light'>
         <h1>This is Header of Seller</h1>
         <div id="detail" className={

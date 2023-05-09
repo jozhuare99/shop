@@ -1,5 +1,4 @@
 import React,{} from 'react'
-import { NavLink } from 'react-router-dom'
 import {Nav, Container, Form, Button, InputGroup} from 'react-bootstrap'
 import NavigationLinkData from './navigationLinkData'
 
@@ -23,10 +22,9 @@ export default function Header() {
         </Nav.Item>
         <Nav.Item>
           <Container  className='h-100 cartBagContainer px-2'>
-          <a href='#' onClick={()=>console.log('clicked')} className=' d-flex text-decoration-none align-items-center text-center justify-content-center'>
             <i role='button' className="text-cart-bag text-dark bi bi-bag-fill"></i>
             <p role='button' className='cartNumberCount text-white  position-absolute mx-auto mt-4 '>9</p>
-            </a>
+         
           </Container>
         </Nav.Item>
       </div>
