@@ -3,9 +3,10 @@ import { Nav, Container, Form, Button, InputGroup } from "react-bootstrap";
 import NavigationLinkData from "./navigationLinkData";
 import { SampleAuthProvider } from "./api/auth";
 
+
 export default function Header() {
   return (
-    <>
+    <AuthProvider>
       <Container className="my-2 ">
         <Nav
           variant=""
@@ -75,7 +76,7 @@ export default function Header() {
           </div>
         </Nav>
       </Container>
-    </>
+    </AuthProvider>
   );
 }
 
@@ -109,51 +110,51 @@ function AuthProvider({ children }) {
 
 // / ----------------------------------------------------------------
 
-const App = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [jwt, setJwt] = useState('');
+// const App = () => {
+//   const [username, setUsername] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [jwt, setJwt] = useState('');
 
-  const handleLogin = () => {
-    // Make a POST request to the /login endpoint.
-    fetch('/api/login', {
-      method: 'POST',
-      body: JSON.stringify({ username, password }),
-    })
-      .then(response => response.json())
-      .then(data => {
-        // Set the JWT token.
-        setJwt(data.jwt);
-      });
-  };
+//   const handleLogin = () => {
+//     // Make a POST request to the /login endpoint.
+//     fetch('/api/login', {
+//       method: 'POST',
+//       body: JSON.stringify({ username, password }),
+//     })
+//       .then(response => response.json())
+//       .then(data => {
+//         // Set the JWT token.
+//         setJwt(data.jwt);
+//       });
+//   };
 
-  const handleLogout = () => {
-    // Set the JWT token to an empty string.
-    setJwt('');
-  };
+//   const handleLogout = () => {
+//     // Set the JWT token to an empty string.
+//     setJwt('');
+//   };
 
-  return (
-    <div>
-      <h1>Login</h1>
-      <input
-        type="text"
-        value={username}
-        onChange={e => setUsername(e.target.value)}
-      />
-      <br />
-      <input
-        type="password"
-        value={password}
-        onChange={e => setPassword(e.target.value)}
-      />
-      <br />
-      <button onClick={handleLogin}>Login</button>
-      <br />
-      <button onClick={handleLogout}>Logout</button>
-      <br />
-      {jwt !== '' && (
-        <h2>Protected Resource</h2>
-      )}
-    </div>
-  );
-};
+//   return (
+//     <div>
+//       <h1>Login</h1>
+//       <input
+//         type="text"
+//         value={username}
+//         onChange={e => setUsername(e.target.value)}
+//       />
+//       <br />
+//       <input
+//         type="password"
+//         value={password}
+//         onChange={e => setPassword(e.target.value)}
+//       />
+//       <br />
+//       <button onClick={handleLogin}>Login</button>
+//       <br />
+//       <button onClick={handleLogout}>Logout</button>
+//       <br />
+//       {jwt !== '' && (
+//         <h2>Protected Resource</h2>
+//       )}
+//     </div>
+//   );
+// };
